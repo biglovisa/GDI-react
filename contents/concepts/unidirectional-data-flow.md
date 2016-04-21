@@ -1,2 +1,1 @@
-Unidirectional data flow
-Data down, events up
+Unidirectional data flow/Data down, events up
