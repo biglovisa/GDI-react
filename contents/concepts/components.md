@@ -172,6 +172,21 @@ ReactDOM.render(
 );
 ```
 
+The `Header` component might look something like this:
+
+```js
+var Header = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <h1>Caporama Travels</h1>
+        <p>Email | 123.456.7890</p>
+      </div>
+    )
+  }
+});
+```
+
 The `Menu` component might look something like this:
 
 ```
@@ -203,6 +218,7 @@ var ContentBox = React.createClass({
     return (
       <div>
         <img src="/assets/las-ventas-group-photo.jpg">
+        <h3>About Caporama Travels</h3>
         <p>
           // text
         <p>
@@ -215,6 +231,13 @@ var ContentBox = React.createClass({
 The `Root` component is rendering the `Header`, `Menu`, and `ContentBox` components. This makes it the `Root` the parent component to the components it renders. In this example, at the top of our component hierarchy is the `Root` component which renders all subsequent child components. You can visualize this either as a russian doll (each doll keeps the next one), or as a root system like below.
 
 ![](https://media.giphy.com/media/3JKjWIEcJvg9W/giphy.gif)
+
+### Exercise
+
+* What could the component hierarchy of the following pages be:
+  * http://www.nytimes.com/
+  * https://www.reddit.com
+  * http://www.hummusapien.com/
 
 ---
 

@@ -26,6 +26,8 @@ A few rules...
 * _break_
 * [Implementing dynamic filtering](examples/dynamic-filtering.md) (120 min)
 
+**Note:** all JavaScript code will be in ES5.
+
 #### Repo Guide
 
 **contents:** class material
