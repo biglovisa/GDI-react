@@ -22,4 +22,5 @@ JSX is used in React components to more easily be able to
 
 ### Exercise
 
-* iterate over array of things and render in the `Hello World` component
+* Iterate over an array of names (`["Grace", "Margaret", "Anita"]`) and render them on the page.
+* Render an input field, have the user inser their name and then render `Hello, UserName!`?
