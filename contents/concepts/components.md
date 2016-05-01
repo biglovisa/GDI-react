@@ -149,6 +149,75 @@ As of now, the React component doesn't yet show up on the page. We need to tell 
 
 ---
 
+### Component Hierarchy
+
+In React, we typically have one root component which renders all other components. In the sample view above, with a header, menu and content section, the view could be rendered in a `Root` component like this:
+
+```js
+var Root = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <Header />
+        <Menu />
+        <ContentBox />
+      </div>
+    )
+  }
+});
+
+ReactDOM.render(
+  <Root />,
+  document.getElementById('container');
+);
+```
+
+The `Menu` component might look something like this:
+
+```
+var Menu = React.createClass({
+  render: function() {
+    var types = ["menu", "about", "contact"];
+
+    var links = types.map(function(type, i) {
+      capitalized = type.slice(0,1).toUpperCase() + type.slice(1);
+      return (
+        <a href="{type}.html">{type}</a>
+      )
+    });
+
+    return (
+      <div>
+        {links}
+      </div>
+    )
+  }
+});
+```
+
+and the `ContentBox` component might look something like this:
+
+```
+var ContentBox = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <img src="/assets/las-ventas-group-photo.jpg">
+        <p>
+          // text
+        <p>
+      </div>
+    )
+  }
+});
+```
+
+The `Root` component is rendering the `Header`, `Menu`, and `ContentBox` components. This makes it the `Root` the parent component to the components it renders. In this example, at the top of our component hierarchy is the `Root` component which renders all subsequent child components. You can visualize this either as a russian doll (each doll keeps the next one), or as a root system like below.
+
+![](https://media.giphy.com/media/3JKjWIEcJvg9W/giphy.gif)
+
+---
+
 Code:
 
 ```html
