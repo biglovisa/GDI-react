@@ -2,7 +2,7 @@
 
 This is a brief guide on how to get started with npm. For more detailed explanation/tutorials, please see the resources at the bottom of this page.
 
-Npm makes it easier for developers to share and reuse code. With it you can download and use JavaScript libraries others (or yourself) have written. There are packages that give you cool css transformations, helps with time formatting, and helps you use charts.
+Npm makes it easier for developers to share and reuse code. With it you can download and use JavaScript libraries others (or yourself) have written. There are packages that give you cool CSS transformations, helps with time formatting, and helps you use charts.
 
 **Create a package.json file**
 

@@ -1,6 +1,6 @@
 # Girl Develop It - React.js
 
-Welcome to GDI!
+Welcome to GDI! See outline and repository guide below.
 
 **introductions**
 
@@ -25,3 +25,9 @@ A few rules...
 * [Implementing a counter](examples/counter.md) (60 min)
 * _break_
 * [Implementing dynamic filtering](examples/dynamic-filtering.md) (120 min)
+
+#### Repo Guide
+
+**contents:** class material
+**examples:** code samples and step-by-step explanatiosn
+**toolbox:** guides, resources and cheatsheet
