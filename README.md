@@ -2,6 +2,8 @@
 
 Welcome to GDI! See outline and repository guide below.
 
+![](https://media.giphy.com/media/BQAk13taTaKYw/giphy.gif)
+
 **introductions**
 
 A few rules...
@@ -14,7 +16,6 @@ A few rules...
 
 * [Intro](contents/intro.md) (30 min)
 * _break_
-* [Welcome to the App](contents/welcome-to-the-app.md)
 * React Concepts (30 min)
   * [Components](contents/concepts/components.md)
   * [JSX](contents/concepts/jsx.md)
