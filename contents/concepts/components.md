@@ -114,7 +114,7 @@ Time for React! Let's write a component called `HelloWorld` and, for now, render
 
 ```html
 <script type="text/babel">
-  var HelloWorld = React.createClass({
+  var helloWorld = React.createClass({
     render: function () {
       return (
         <h1>Hello, World!</h1>
@@ -129,7 +129,7 @@ As of now, the React component doesn't yet show up on the page. We need to tell 
 ```html
 <div id="container"></div>
 <script type="text/babel">
-  var HelloWorld = React.createClass({
+  var helloWorld = React.createClass({
     render: function () {
       return (
         <h1>Hello, World!</h1>
@@ -137,7 +137,7 @@ As of now, the React component doesn't yet show up on the page. We need to tell 
     }
   });
 
-  ReactDOM.render(<HelloWorld />, document.getElementById('container')
+  ReactDOM.render(<helloWorld />, document.getElementById('container')
   );
 </script>
 ```
