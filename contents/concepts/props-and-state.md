@@ -70,7 +70,7 @@ var ContentBox = React.createClass({
 
 ### State
 
-`State` is local to a component and it can only be updated from within that component. State can be passed down to child components as props.
+`State` is local to a component and it can only be updated from within that component. State can be passed down to child components as props. Any values that you need access to and will update throughout the lifetime of your component should be maintained as state.
 
 When dealing with state in component, you need to define an initial value for it. For example, let's say we have a component with a button. When the button is clicked, we should increase a counter by 1.
 
