@@ -1,6 +1,6 @@
 # Counter
 
-![](http://recordit.co/YFm33ErFti)
+![](http://recordit.co/YFm33ErFti.gif)
 
 We are starting with this html template:
 
