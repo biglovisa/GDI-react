@@ -74,7 +74,7 @@ var ContentBox = React.createClass({
 
 When dealing with state in component, you need to define an initial value for it. For example, let's say we have a component with a button. When the button is clicked, we should increase a counter by 1.
 
-Below, we have a `getInitialState` function. Here, we define a `clicked` state. We can access this value in the component as `this.state.clicked`, see the `h1` tag in the return statement. Also note the comma after the `getInitialState` function, in React components we separate functions with commas (components are just objects, and key value pairs in JavaScript are delimited by commas).
+Below, we have a `getInitialState` function. Here, we define a `clicked` state. We can access this value in the component as `this.state.clicked`, see the `h1` tag in the return statement. Also note the comma after the `getInitialState` function; in React, we separate functions with commas (components are just objects, and key value pairs in JavaScript are delimited by commas).
 
 ```js
 var ClickableComponent = React.createClass({
@@ -93,7 +93,7 @@ var ClickableComponent = React.createClass({
 });
 ```
 
-Currently, when we click the button, nothing happens. We need to add an event handler which can react to the button click. There are tons of [event handlers](https://facebook.github.io/react/docs/events.html) in React, they support almost all native browser events. We are going to use the `onClick` event handler.
+Currently, when we click the button, nothing happens. We need to add an event handler which can react to the button click. There are tons of [event handlers](https://facebook.github.io/react/docs/events.html) in React and they support almost all native browser events. We are going to use the `onClick` event handler.
 
 ```js
 var ClickableComponent = React.createClass({
@@ -108,7 +108,7 @@ var ClickableComponent = React.createClass({
   render: function() {
     return (
       <div>
-        <button onClick={this.handleClick} >Click me!</button>
+        <button onClick={this.handleClick}>Click me!</button>
         <h1>Clicked: {this.state.clicked}</h1>
       </div>
     )
@@ -122,7 +122,7 @@ What we really want to do in the `handleClick` function is to update the value o
 
 ```js
 handleClick: function() {
-  this.setState({ clicked: ++this.state.clicked })
+  this.setState({ clicked: ++this.state.clicked });
 },
 ```
 

@@ -1,6 +1,6 @@
 # Data Down, Events Up
 
-Ok, so we know we can use `props` to pass down data to the child components. We know that props are immutable in the child components. Consider this; we have a `Root` components that's rendering a `Names` component. The `Names` components recieve an array of names from the `Root` component. In the `Name` component, we iterate over the array of names and render them on the page.
+Ok, so we know we can use `props` to pass down data to the child components. We know that props are immutable in the child components. Consider this; we have a `Root` components that's rendering a `Names` component. The `Names` component recieve an array of names from the `Root` component. In the `Name` components, we iterate over the array of names and render them on the page.
 
 Now, we want to add a `remove` button next to each name so the user can remove names from the list. Since we are getting the array of names as a prop from the parent, we can't update the array in the `Names` component. We need to "signal" to the parent component that a change needs to be made to the array of names.
 

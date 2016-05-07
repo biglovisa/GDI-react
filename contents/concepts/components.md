@@ -1,12 +1,12 @@
 # Components and Component Hierarchy
 
-When you build UI's (user interfaces) with React, the line between HTML and JavaScript becomes a bit fuzzier. In React, you keep HTML and JavaScript together. Instead of splitting up your view in JavaScript and HTML, you split it up in __components__. You build out the separate pieces of your view in components, which you then compose to a whole.
+When you build UI's (user interfaces) with React, the line between HTML and JavaScript becomes a bit fuzzier. In React, you keep HTML and JavaScript together. Instead of splitting up your view in JavaScript and HTML, you split it up in _components_. You build out the separate pieces of your view in components, which you then compose to a whole.
 
 For example, what are some of the different sections of this view:
 
 ![](../../assets/sample-view.png)!
 
-A header, a menu and a content box with an image.
+For example: a header, a menu and a content box with an image.
 
 In React, this would translate to three components, each component holding the JavaScript and HTML for that section.
 
@@ -25,8 +25,6 @@ What are some possible components of the following websites?
 * https://www.girldevelopit.com/
 * https://www.reddit.com/
 * http://www.nytimes.com/
-
-###
 
 ### Syntax
 
@@ -48,7 +46,7 @@ var Menu = React.createClass({
 
 In the above component, we are writing JavaScript and returing HTML. This is great since it makes it easier to create abstractions around our view layer. As of now, there's some duplication in our component. The links are almost exactly the same. Instead, we can iterate over the menu types and create the link element dynamically.
 
-In the return statements, JavaScript that we want to be evaluated (here, the local variables `type` and `capitalizedType`) should be enclosed in curly braces `{jsVariable}`.
+In the return statements, JavaScript that we want to be evaluated (here, the local variables `type` and `capitalizedType`) should be enclosed in curly braces: `{jsVariable}`.
 
 ```js
 var Menu = React.createClass({
@@ -56,7 +54,7 @@ var Menu = React.createClass({
     var types = ['home', 'about', 'contacts'];
 
     var links = types.map(function(type, i) {
-      var capitalizedType = type.slice(0,1).toUpperCase() + type.slice(1)
+      var capitalizedType = type.slice(0, 1).toUpperCase() + type.slice(1)
       return (
         <a href="{type}.html" key={i}>{capitalizedType}</a>
       )
@@ -144,7 +142,7 @@ As of now, the React component doesn't yet show up on the page. We need to tell 
 
 ### Extra
 
-* Can you iterate over an array of names (`["Grace", "Margaret", "Anita"]`) and render them on the page? See the link example below if you are unsure.
+* Can you iterate over an array of names (`["Grace", "Margaret", "Anita"]`) and render them on the page? See the link example above if you are unsure.
 * Can you render an input field, have the user inser their name and then render `Hello, UserName!`?
 
 ---
@@ -195,7 +193,7 @@ var Menu = React.createClass({
     var types = ["menu", "about", "contact"];
 
     var links = types.map(function(type, i) {
-      capitalized = type.slice(0,1).toUpperCase() + type.slice(1);
+      capitalized = type.slice(0, 1).toUpperCase() + type.slice(1);
       return (
         <a href="{type}.html">{type}</a>
       )
