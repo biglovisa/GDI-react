@@ -15,7 +15,7 @@ We are starting with this html template:
 </head>
 <body>
   <div id="container"></div>
-  <script type="text/babel"><script/>
+  <script type="text/babel"></script>
 </body>
 </html>
 ```
