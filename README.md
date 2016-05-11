@@ -32,5 +32,7 @@ A few rules...
 #### Repo Guide
 
 **contents:** class material
+
 **examples:** code samples and step-by-step explanatiosn
+
 **toolbox:** guides, resources and cheatsheet
