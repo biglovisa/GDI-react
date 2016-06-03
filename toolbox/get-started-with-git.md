@@ -23,7 +23,7 @@ Making a git commit involves two steps:
 
 Step one:
 ```sh
-$ git commit fileToCommit.js
+$ git add fileToCommit.js
 ```
 
 Step 2:
