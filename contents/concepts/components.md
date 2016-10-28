@@ -22,7 +22,7 @@ In React, this would translate to three components, each component holding the J
 
 Go to one or two websites and find the different components on the page.
 
-[Example](./../assets/caac.png)
+[Example](../../assets/caac.png)
 
 ### Syntax
 
