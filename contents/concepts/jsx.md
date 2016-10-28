@@ -11,7 +11,7 @@ This is valid JSX:
 This is also valid JSX:
 
 ```
-var name = "Penny";
+const name = "Penny";
 
 <h1>Hello, {name}!</h1>
 ```

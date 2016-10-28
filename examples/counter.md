@@ -22,7 +22,7 @@ We are starting with this html template:
 
 Feel free to start coding or pseudo coding right away if you already have a plan for how to get it working.
 
-In **part 1** there's a brief plan on what steps to follow when implementing the functionality. **Part 2** is more descriptive and explains each step more in detail. I would suggest that you read through part 1 and use part 2 as a reference - the numbers for the steps in part 1 and part 2 correspond!
+In **part 1** there's a brief plan on what steps to follow when implementing the al =>ity. **Part 2** is more descriptive and explains each step more in detail. I would suggest that you read through part 1 and use part 2 as a reference - the numbers for the steps in part 1 and part 2 correspond!
 
 Use at least none, one or both!
 
@@ -49,8 +49,8 @@ Suggested steps:
 **1**: First we need a `Counter` component where our main functionality will live. As for now, let's just render an `h1` tag with the string hardcoded. When we have implemented the count functionality, we will dynamically render it instead.
 
 ```js
-var Counter = React.createClass({
-  render: function() {
+const Counter = React.createClass({
+  render: () => {
     return (
       <div>
         <h1>Count: 0</h1>
@@ -91,7 +91,7 @@ return (
 **5**: First, let's add the `handleClick` function. Run this in your browser with the dev tools open (`cmd` + `option` + `i`) - if you see it logging to the console, it's wired up correctly!
 
 ```html
-var Counter = React.createClass({
+const Counter = React.createClass({
   handleClick: function() {
     console.log('helo')
   },
@@ -112,7 +112,7 @@ How should this be stored in the component? The `count` is a value that we need 
 Add an `getInitialState` function to set an initial value for the state. In our case, it's just `0`.
 
 ```html
-var Counter = React.createClass({
+const Counter = React.createClass({
   getInitialState: function() {
     return { count: 0 }
   },
@@ -124,8 +124,8 @@ var Counter = React.createClass({
 In the handle click function, we want to increase the value of `this.state.count` by 1 every time the `Add` button is clicked. We use the `this.setState()` function from React which allows us to update the state of the component. Note that the `this` in `this.setState` refers to the component itself.
 
 ```html
-handleClick: function() {
-  var modifiedCount = this.state.count + 1
+handleClick: () => {
+  const modifiedCount = this.state.count + 1
   this.setState({ count: modifiedCount });
 }
 ```

@@ -20,19 +20,17 @@ In React, this would translate to three components, each component holding the J
 
 ### Exercise
 
-What are some possible components of the following websites?
+Go to one or two websites and find the different components on the page.
 
-* https://www.girldevelopit.com/
-* https://www.reddit.com/
-* http://www.nytimes.com/
+[Example](./../assets/caac.png)
 
 ### Syntax
 
 Each component has _one_ `render` function which returns what should be rendered on the DOM.
 
 ```js
-var Menu = React.createClass({
-  render: function() {
+const Menu = React.createClass({
+  render: () => {
     return (
       <div>
         <a href="home.html">Home</a>
@@ -46,15 +44,15 @@ var Menu = React.createClass({
 
 In the above component, we are writing JavaScript and returing HTML. This is great since it makes it easier to create abstractions around our view layer. As of now, there's some duplication in our component. The links are almost exactly the same. Instead, we can iterate over the menu types and create the link element dynamically.
 
-In the return statements, JavaScript that we want to be evaluated (here, the local variables `type` and `capitalizedType`) should be enclosed in curly braces: `{jsVariable}`.
+In the return statements, JavaScript that we want to be evaluated (here, the local constiables `type` and `capitalizedType`) should be enclosed in curly braces: `{jsVariable}`.
 
 ```js
-var Menu = React.createClass({
-  render: function() {
-    var types = ['home', 'about', 'contacts'];
+const Menu = React.createClass({
+  render: () => {
+    const types = ['home', 'about', 'contacts'];
 
-    var links = types.map(function(type, i) {
-      var capitalizedType = type.slice(0, 1).toUpperCase() + type.slice(1)
+    const links = types.map((type, i) => {
+      const capitalizedType = type.slice(0, 1).toUpperCase() + type.slice(1)
       return (
         <a href="{type}.html" key={i}>{capitalizedType}</a>
       )
@@ -89,7 +87,7 @@ In a new directory, create a file called `index.html`.
 </html>
 ```
 
-In the `<head>`, add the necessary React cdns. We also need to require [Babel](https://babeljs.io/), a JavaScript compiler. Some of the JSX is not recognized by browsers and needs to be "translated" to an older version of JavaScript.
+In the `<head>`, add the necessary React cdns. We also need to require [Babel](https://babeljs.io/), a JavaScript compiler. Some of the JSX is not recognized by browsers and needs to be "translated" to a previous version of JavaScript. Node 7 was recently announced and ES6 language features are 98% supported!
 
 ```html
 <head>
@@ -112,8 +110,8 @@ Time for React! Let's write a component called `HelloWorld` and, for now, render
 
 ```html
 <script type="text/babel">
-  var HelloWorld = React.createClass({
-    render: function () {
+  const HelloWorld = React.createClass({
+    render: () => {
       return (
         <h1>Hello, World!</h1>
       );
@@ -127,8 +125,8 @@ As of now, the React component doesn't yet show up on the page. We need to tell 
 ```html
 <div id="container"></div>
 <script type="text/babel">
-  var HelloWorld = React.createClass({
-    render: function () {
+  const HelloWorld = React.createClass({
+    render: () => {
       return (
         <h1>Hello, World!</h1>
       );
@@ -152,8 +150,8 @@ As of now, the React component doesn't yet show up on the page. We need to tell 
 In React, we typically have one root component which renders all other components. In the sample view above, with a header, menu and content section, the view could be rendered in a `Root` component like this:
 
 ```js
-var Root = React.createClass({
-  render: function() {
+const Root = React.createClass({
+  render:n() => {
     return (
       <div>
         <Header />
@@ -173,8 +171,8 @@ ReactDOM.render(
 The `Header` component might look something like this:
 
 ```js
-var Header = React.createClass({
-  render: function() {
+const Header = React.createClass({
+  render: () => {
     return (
       <div>
         <h1>Caporama Travels</h1>
@@ -188,11 +186,11 @@ var Header = React.createClass({
 The `Menu` component might look something like this:
 
 ```
-var Menu = React.createClass({
-  render: function() {
-    var types = ["menu", "about", "contact"];
+const Menu = React.createClass({
+  render: () => {
+    const types = ["menu", "about", "contact"];
 
-    var links = types.map(function(type, i) {
+    const links = types.map(function(type, i) {
       capitalized = type.slice(0, 1).toUpperCase() + type.slice(1);
       return (
         <a href="{type}.html">{type}</a>
@@ -211,8 +209,8 @@ var Menu = React.createClass({
 and the `ContentBox` component might look something like this:
 
 ```
-var ContentBox = React.createClass({
-  render: function() {
+const ContentBox = React.createClass({
+  render:n() => {
     return (
       <div>
         <img src="/assets/las-ventas-group-photo.jpg">
@@ -253,8 +251,8 @@ Code:
 <body>
   <div id="container"></div>
   <script type="text/babel">
-    var HelloWorld = React.createClass({
-      render: function () {
+    const HelloWorld = React.createClass({
+      render: () => {
         return (
           <h1>Hello, World!</h1>
         );

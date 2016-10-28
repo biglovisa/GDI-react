@@ -1,6 +1,6 @@
 # Data Down, Events Up
 
-Ok, so we know we can use `props` to pass down data to the child components. We know that props are immutable in the child components. Consider this; we have a `Root` components that's rendering a `Names` component. The `Names` component recieve an array of names from the `Root` component. In the `Name` components, we iterate over the array of names and render them on the page.
+Ok, so we know we can use `props` to pass down data to the child components. We know that props are immutable in the child components. Consider this; we have a `Root` components that's rendering a `Names` component. The `Names` component receive an array of names from the `Root` component. In the `Name` components, we iterate over the array of names and render them on the page.
 
 Now, we want to add a `remove` button next to each name so the user can remove names from the list. Since we are getting the array of names as a prop from the parent, we can't update the array in the `Names` component. We need to "signal" to the parent component that a change needs to be made to the array of names.
 
@@ -11,12 +11,12 @@ Let's code it!
 The `Root` component has a `getInitialState` function which sets the initial value of our state, and in the return statement we render a component `Names` and pass it the array of names as a prop.
 
 ```js
-var Root = React.createClass({
-  getInitialState: function() {
+const Root = React.createClass({
+  getInitialState: () => {
     return { names: ["Grace", "Margaret", "Anita"] }
   },
 
-  render: function() {
+  render: () => {
     return (
       <div>
         <Names names={this.state.names} />
@@ -29,9 +29,9 @@ var Root = React.createClass({
 The `Names` component might look something like this:
 
 ```js
-var Names = React.createClass({
-  render: function() {
-    var names = this.props.names.map(function(name, i) {
+const Names = React.createClass({
+  render: () => {
+    const names = this.props.names.map((name, i) => {
       return (
         <p key={i}>Hello, {name}!</p>
       )
@@ -49,14 +49,14 @@ var Names = React.createClass({
 In the `Names` component, let's add a button to remove the given name. The button has an `onClick` event handler, when it's clicked, the `handleClick` function at the top of the component is executed. The `handleClick` function takes an argument. In the `onClick` event handler, we bind the index of the name to be removed to the function call.
 
 ```js
-var Names = React.createClass({
-  handleClick: function(index) {
+const Names = React.createClass({
+  handleClick: (index) => {
     this.props.onRemoveName(index);
   },
 
-  render: function() {
-    var that = this;
-    var names = this.props.names.map(function(name, index) {
+  render: () => {
+    const that = this;
+    const names = this.props.names.map((name, index) => {
       return (
         <p key={index}>
           Hello, {name}!
@@ -79,8 +79,8 @@ Note that we are calling `this.props.onRemoveName` in the `handleClick` function
 We pass down the prop `onRemoveName` to the `Names` component and when that function is called, we will log the index that was passed up to callback `handleRemoveName`.
 
 ```js
-var Root = React.createClass({
-  getInitialState: function() {
+const Root = React.createClass({
+  getInitialState: () => {
     return { names: ["Grace", "Margaret", "Anita"] }
   },
 
@@ -88,7 +88,7 @@ var Root = React.createClass({
     console.log('In root component', index);
   },
 
-  render: function() {
+  render: () => {
     return (
       <div>
         <Names names={this.state.names} onRemoveName={this.handleRemoveName} />
@@ -100,11 +100,11 @@ var Root = React.createClass({
 
 Did the index log correctly?
 
-To complete the desired functionaly we need to filter out the clicked name from the array of names and then set the updated array as state with the function `setState()`.
+To complete the desired functionality we need to filter out the clicked name from the array of names and then set the updated array as state with the function `setState()`.
 
 ```js
-handleRemoveName: function(index) {
-  var newNames = this.state.names.filter(function(name, i) {
+handleRemoveName: (index) => {
+  const newNames = this.state.names.filter((name, i) => {
     return i !== index;
   });
 
@@ -114,6 +114,6 @@ handleRemoveName: function(index) {
 
 ### Exercise
 
-* Add a component `Animals` that's rendered in the `Root` component. `Animals` should have the same functionality as `Names`, but instead of human names it renders animal species.
+* Add a component `Animals` that's rendered in the `Root` component. `Animals` should have the same ality as `Names`, bu=> t instead of human names it renders animal species.
 * Add an input field that takes in new names. When a name is submitted, add it to the array of names in the `Root` component. The input field can live in the `Root` component.
 * Can you move the input field to it's own `AddName` component and maintain the same functionality?

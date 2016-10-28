@@ -2,14 +2,6 @@
 
 Welcome to GDI! See outline and repository guide below.
 
-**introductions**
-
-A few rules...
-
-* Be respectful of others and their learning
-* Every question is important!
-* Raise your hand at any point if you need something clarified
-
 ![](https://media.giphy.com/media/BQAk13taTaKYw/giphy.gif)
 
 #### Outline
@@ -27,12 +19,10 @@ A few rules...
 * _break_
 * [Implementing dynamic filtering](examples/dynamic-filtering.md) (120 min)
 
-**Note:** all JavaScript code will be in ES5.
-
 #### Repo Guide
 
 **contents:** class material
 
-**examples:** code samples and step-by-step explanatiosn
+**examples:** code samples and step-by-step explanation
 
 **toolbox:** guides, resources and cheatsheet
