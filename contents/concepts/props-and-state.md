@@ -58,7 +58,8 @@ const ContentBox = React.createClass({
       </div>
     )
   }
-});```
+});
+```
 
 **NOTE: Props are immutable in the child component!**
 
